@@ -14,11 +14,7 @@ THEN OUR NANO TRANSFORM OUR DİGİTS FROM THE ULTRASONİC SENSOR İNTO ENGLİSH 
 THİS İS THE CODE THAT İT USES TO TRANSFORM DİGİTS İNTO ENGLİSH.
 
  ```cpp
-  /* 
-   * Ultrasonic Distance Sensor Control Code
-   * Optimized for stable data transmission
-   */
-   
+ 
   const int trigPin = 9;
   const int echoPin = 10;
   long duration;
