@@ -60,4 +60,5 @@ FULL DESİGN AND THE 3D PARTS
 OUR PROJECT WAS DESİGNED İN THİNKERCAD 3D AND AT THE END WE GET TWO MODELS. ONE OF THEM İS THE FULL PRODUCT WİTH SCREEN AND SENSORS. AND ONE OF THEM İS THE PARTS THAT YOU ARE GOİNG TO PRİNT İN YOUR 3D PRİNTERS.
 
 FULL PROJECT HOW İS İT GOİNG TO LOOK:
-  [View 3D Model: Ultra sonik metre 2.0.STL](Ultra%20sonik%20metre%202.0.stl)
+*   🔍 **[View Printable Case (STL)](Ultrasonic_Meter_2_0.stl)**
+*   🔍 **[View Full Assembly (STL)](Ultrasonic_Meter_Full.stl)**
