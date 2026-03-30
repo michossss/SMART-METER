@@ -61,4 +61,4 @@ OUR PROJECT WAS DESİGNED İN THİNKERCAD 3D AND AT THE END WE GET TWO MODELS. O
 
 FULL PROJECT HOW İS İT GOİNG TO LOOK:
 *   🔍 **[View Printable Case (STL)](Ultrasonic_Meter_2_0.stl)**
-*   🔍 **[View Full Assembly (STL)](Ultrasonic_Meter_Full.stl)**
+*   🔍 **[View Full Assembly (STL)](Ultrasonic_Meter_Parts.stl)**
