@@ -20,12 +20,12 @@ THİS SİGNAL İS THEN SENT TO OUR DİSPLAY, WİCH HAS AN I2C MODULE İNSTALLED.
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
 
-// I2C Adresi: 0x27 veya 0x3F (Mavi ekranda yazı gelmezse 0x3F yap)
+// I2C Adress
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 const int trigPin = 9;
 const int echoPin = 10;
-const int cihazBoyu = 10; // Cihazın arkasından ölçüm yapması için +10 cm
+const int cihazBoyu = 10; 
 
 void setup() {
   lcd.init();
@@ -47,7 +47,7 @@ void loop() {
   float cm;
   float toplamMesafe;
 
-  // Mesafe Ölçümü
+  // DİSTANCE MEASUREMENT
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin, HIGH);
@@ -56,11 +56,11 @@ void loop() {
 
   sure = pulseIn(echoPin, HIGH);
   
-  // Ölçüm ve 10 cm ofset ekleme
+  // ADDİNG THE DEVİCE SİZE
   cm = sure * 0.034 / 2;
   toplamMesafe = cm + cihazBoyu;
 
-  // --- EKRAN TASARIMI ---
+  // --- SCREEN DESİGN ---
   lcd.setCursor(0, 0);
   lcd.print("cm:");
   if(cm > 0) {
@@ -77,7 +77,7 @@ void loop() {
   lcd.print((toplamMesafe / 100.0), 2);
   lcd.print(" m     "); // Eski karakterleri temizlemek için boşluk
 
-  delay(600); // Gözle rahat takip etmek için ideal süre
+  delay(600); 
 }
 ```
 
