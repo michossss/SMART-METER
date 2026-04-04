@@ -87,7 +87,7 @@ void loop() {
 
 MAX: 5 METERS
 
-MİN: 12 CENTİMETER
+MİNİMUM: 12 CENTİMETER
 
  <img dth="343" height="636" alt="image" src="https://github.com/user-attachments/assets/840b026a-34aa-4ff7-860b-2d5d5cafe1ac" />
 
