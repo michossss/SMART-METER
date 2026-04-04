@@ -35,9 +35,9 @@ void setup() {
   pinMode(echoPin, INPUT);
   
   lcd.setCursor(0, 0);
-  lcd.print("Sistem Aciliyor");
+  lcd.print("System is opening");
   lcd.setCursor(0, 1);
-  lcd.print("Mico Yukleniyor.");
+  lcd.print("Micho is Loading");
   delay(1500);
   lcd.clear();
 }
@@ -73,7 +73,7 @@ void loop() {
   lcd.print("Mico"); // Sağ üst köşe imzası
 
   lcd.setCursor(0, 1);
-  lcd.print("Metre: ");
+  lcd.print("Meter: ");
   lcd.print((toplamMesafe / 100.0), 2);
   lcd.print(" m     "); // Eski karakterleri temizlemek için boşluk
 
