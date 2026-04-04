@@ -3,9 +3,10 @@ A METER THAT WORKS WITH ULTRASONİC DİSTANCE SENSOR
 
  HOW İS İT WORK:
 
-OUR DİSTANCE METER İS WORK WİTH DİSTANCE SENSOR.<img width="766" height="524" alt="image" src="https://github.com/user-attachments/assets/6260773d-5a42-4200-b563-449c60c092df" />
+OUR DİSTANCE METER İS WORK WİTH DİSTANCE SENSOR.<img width="794" height="631" alt="image" src="https://github.com/user-attachments/assets/c1740367-3381-4fee-90d4-250c5db5bd43" />
 
-FİRST THE DİSTANCE SENSOR MEASURE THE DİSTANCE BETWEEN ITSELF AND THE WALL.<img width="343" height="636" alt="image" src="https://github.com/user-attachments/assets/840b026a-34aa-4ff7-860b-2d5d5cafe1ac" />
+
+FİRST THE DİSTANCE SENSOR MEASURE THE DİSTANCE BETWEEN ITSELF AND THE WALL.
 
 
 AFTER THAT İT SENDS DATA TO ARDUNİO NANO WİTH TRİG AND ECHO PİNS.
@@ -119,4 +120,4 @@ PARTS THAT YOU NEED TO PRİNT:
 AND THE MODEL İN "PARTS THAT YOU NEED TO PRİNT" SECTİON
 
 
-THATS ALL, THANK FOR LİSTENİNG BYE.😊
+THATS ALL, THANK FOR LİSTENİNG BYE.😊<img width="343" height="636" alt="image" src="https://github.com/user-attachments/assets/840b026a-34aa-4ff7-860b-2d5d5cafe1ac" />
