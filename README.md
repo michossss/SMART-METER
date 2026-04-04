@@ -17,40 +17,68 @@ THİS SİGNAL İS THEN SENT TO OUR DİSPLAY, WİCH HAS AN I2C MODULE İNSTALLED.
 
  ```cpp
  
-  const int trigPin = 9;
-  const int echoPin = 10;
-  long duration;
-  int distance;
+#include <Wire.h> 
+#include <LiquidCrystal_I2C.h>
 
-  void setup() {
-    pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
-    pinMode(echoPin, INPUT);  // Sets the echoPin as an Input
-    Serial.begin(9600);       // Starts the serial communication
+// I2C Adresi: 0x27 veya 0x3F (Mavi ekranda yazı gelmezse 0x3F yap)
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+const int trigPin = 9;
+const int echoPin = 10;
+const int cihazBoyu = 10; // Cihazın arkasından ölçüm yapması için +10 cm
+
+void setup() {
+  lcd.init();
+  lcd.backlight();
+  
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  
+  lcd.setCursor(0, 0);
+  lcd.print("Sistem Aciliyor");
+  lcd.setCursor(0, 1);
+  lcd.print("Mico Yukleniyor.");
+  delay(1500);
+  lcd.clear();
+}
+
+void loop() {
+  long sure;
+  float cm;
+  float toplamMesafe;
+
+  // Mesafe Ölçümü
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  sure = pulseIn(echoPin, HIGH);
+  
+  // Ölçüm ve 10 cm ofset ekleme
+  cm = sure * 0.034 / 2;
+  toplamMesafe = cm + cihazBoyu;
+
+  // --- EKRAN TASARIMI ---
+  lcd.setCursor(0, 0);
+  lcd.print("cm:");
+  if(cm > 0) {
+    lcd.print(toplamMesafe, 1); 
+  } else {
+    lcd.print("---");
   }
 
-  void loop() {
-    // Clearing the trigPin
-    digitalWrite(trigPin, LOW);
-    delayMicroseconds(2);
+  lcd.setCursor(12, 0);
+  lcd.print("Mico"); // Sağ üst köşe imzası
 
-    // Triggering the sensor by setting the trigPin HIGH for 10 microseconds
-    digitalWrite(trigPin, HIGH);
-    delayMicroseconds(10);
-    digitalWrite(trigPin, LOW);
+  lcd.setCursor(0, 1);
+  lcd.print("Metre: ");
+  lcd.print((toplamMesafe / 100.0), 2);
+  lcd.print(" m     "); // Eski karakterleri temizlemek için boşluk
 
-    // Reading the echoPin, returns the sound wave travel time in microseconds
-    duration = pulseIn(echoPin, HIGH);
-
-    // Calculating the distance (Speed of sound is 0.034 cm/us)
-    distance = duration * 0.034 / 2;
-
-    // Prints the distance on the Serial Monitor
-    Serial.print("Distance: ");
-    Serial.print(distance);
-    Serial.println(" cm");
-
-    delay(60); // Essential delay for measurement efficiency
-  }
+  delay(600); // Gözle rahat takip etmek için ideal süre
+}
 ```
 
   WHAT ARE THE LİMİTS
